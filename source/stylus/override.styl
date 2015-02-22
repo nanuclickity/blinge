@@ -1,0 +1,41 @@
+input
+	outline none
+	font-family font_regular
+	font-size 14px
+	line-height 22px
+	color theme_font
+	&:hover, &:focus, &:active, &:focus:active
+		outline none
+		
+input[type='text'], 
+input[type='search'], 
+input[type='password'],
+input[type='url'],
+input[type='number'],
+input[type='tel'],
+textarea
+	border-radius 2px
+	border 1px theme_border solid
+	background none
+	font-family font_regular
+	font-size 14px
+	line-height line_height
+	&::-webkit-input-placeholder
+		color theme_font
+		opacity 0.64
+		
+
+.content-inner
+	padding 0 gutter_x
+	Flex-Vertical()
+	.row
+		display flex
+		margin gutter_y (-1*gutter_x) 0 (-1*gutter_x)
+		
+
+@media (min-width: 992px)	
+	for num in (0 1 2 3 4 5 6 7 8 9 10 11)
+		.col-md-{num}
+			float none
+			flex abs(num - 12)
+		
