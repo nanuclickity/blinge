@@ -1,0 +1,32 @@
+{
+  "name": "speedstack",
+  "version": "0.0.1",
+  "authors": [
+    "Tushar Kant <nanu.clickity@gmail.com>"
+  ],
+  "description": "Frontend stack for lightning fast development",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "roboto-fontface": "*",
+    "requirejs": "*",
+    "marionette": "*",
+    "backbone.radio": "*",
+    "animate.css": "*",
+    "bootstrap": "*",
+    "fontawesome": "*",
+    "requirejs-i18n": "*",
+    "require-css": "*",
+    "requirejs-plugins": "*"
+  }
+}
