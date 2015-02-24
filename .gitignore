@@ -4,3 +4,6 @@ vendor/
 public/css
 public/fonts
 public/js
+
+
+.DS_Store

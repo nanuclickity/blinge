@@ -1,0 +1,32 @@
+js:
+  path: './public/js/vendor'
+  deps: [
+    './node_modules/jade/runtime.js'
+    './vendor/jquery/dist/jquery.js'
+    './vendor/underscore/underscore.js'
+    './vendor/backbone/backbone.js'
+    './vendor/marionette/lib/backbone.marionette.js'
+    './vendor/bootstrap/dist/js/bootstrap.min.js'
+    './vendor/backbone.radio/build/backbone.radio.js'
+    './vendor/richmarker-amd/src/richmarker.js'
+    './vendor/requirejs/require.js'
+    './vendor/typeahead.js/dist/typeahead.bundle.js'
+    './vendor/moment/moment.js'
+    './vendor/bootstrap/dist/js/bootstrap.js'
+  ]
+css:
+  path: './public/css/vendor'
+  deps: [
+    './vendor/bootstrap/dist/css/bootstrap.min.css'
+    './vendor/animate.css/animate.css'
+    './vendor/bootstrap/dist/bootstrap.css'
+  ]
+font:
+  path: './public/fonts'
+  deps: [
+    './vendor/fontawesome/fonts/fontawesome-webfont.*'
+    './vendor/roboto-fontface/fonts/Roboto-*'
+  ]
+others:
+  './vendor/require-css/css.js': './public/js'
+  './vendor/requirejs-plugins/src/async.js': './public/js'
