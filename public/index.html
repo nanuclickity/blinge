@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<title> Speedstack </title>
+		<link rel='stylesheet' type='text/css' href='css/style.css'/>
+		<script type='text/javascript' src='js/vendor/require.js' data-main='js/main'></script>
+	</head>
+
+	<body>
+		<aside id='app-sidebar'></aside>
+		<header id='app-header'></header>
+		<section id='app-content'></section>
+		
+		<script type='text/javascript'>
+			(function(){
+				var sc = document.createElement('script');
+				sc.type = 'text/javascript';
+				sc.src  = !chrome.runtime.reload
+					? "http://127.0.0.1:35729/livereload.js"
+					: "./livereload.js";
+				document.head.appendChild(sc);	
+			})();
+		</script>
+	</body>
+</html>
