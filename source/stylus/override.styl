@@ -1,11 +1,33 @@
-input
+// Anchor Tags
+a
+	color theme_font
+	font-family font_regular
+	text-decoration none
+	&:hover, &:active, &:focus
+		text-decoration none
+	&:hover
+		color color_base
+	&:visited
+		color color_purple
+	&:active, &:focus
+		color color_base
+	
+
+input.form-control
 	outline none
 	font-family font_regular
 	font-size 14px
 	line-height 22px
 	color theme_font
+	box-shadow none
+	border-color theme_border
 	&:hover, &:focus, &:active, &:focus:active
 		outline none
+		box-shadow none
+	&:hover
+		border-color color_base
+	&:focus
+		border-color color_base_border
 		
 input[type='text'], 
 input[type='search'], 
@@ -15,7 +37,8 @@ input[type='number'],
 input[type='tel'],
 textarea
 	border-radius 2px
-	border 1px theme_border solid
+	border-width 1px
+	border-style solid
 	background none
 	font-family font_regular
 	font-size 14px
@@ -24,6 +47,10 @@ textarea
 		color theme_font
 		opacity 0.64
 		
+.input-group
+	.input-group-addon, input.form-control
+		border-radius 0
+
 
 .content-inner
 	padding 0 gutter_x
@@ -33,9 +60,9 @@ textarea
 		margin gutter_y (-1*gutter_x) 0 (-1*gutter_x)
 		
 
+// Columns as flex
 @media (min-width: 992px)	
-	for num in (0 1 2 3 4 5 6 7 8 9 10 11)
+	for num in (0 1 2 3 4 56 7 8 9 10 11)
 		.col-md-{num}
 			float none
 			flex abs(num - 12)
-		
