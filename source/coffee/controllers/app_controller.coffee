@@ -22,11 +22,15 @@ define [
 		
 		onBeforeDestroy: -> do @RM.destroy
 		
+		
 		# Controllers
 		
 		login:  -> @RM.load Content: 'views/login'
-		logout: -> @Rm.load Content: 'views/logout' 
+		logout: -> @RM.load Content: 'views/logout' 
 
-
+		home: ->
+			@RM.load
+				Header : 'views/header'
+				Content: 'views/splash'
 
 	return AppController

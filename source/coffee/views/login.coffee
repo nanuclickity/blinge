@@ -3,10 +3,10 @@ define [
 	'radio'
 	'templates/views/login'
 ], (Marionette, Radio, tpl)->
-	
+
 	class LoginView extends Marionette.ItemView
 		template: tpl
 		className: 'view-login'
 		initialize: ->
-			console.log 'Login Loaded'
+			console.log 'Login Loaded a'
 	return LoginView

@@ -6,7 +6,7 @@ define [
 	class AppRouter extends Marionette.AppRouter
 		
 		appRoutes:
-			'(/)' : 'login'
+			'(/)' : 'home'
 			
 			'login(/)' : 'login'
 			'logout(/)': 'logout'

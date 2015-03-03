@@ -25,7 +25,45 @@ html
 	min-width 100%
 body
 	Layer(0)
-	background-color theme_bg
+	background-color #fafafa
 	color theme_font
 	font-family font_light
 	font-size font_size
+	
+#app-header
+	Layer(z4, {bottom: initial})
+	height header_height
+#app-content
+	Layer(z1, {top: header_height})
+
+
+@keyframes hue-shift
+	from
+		-webkit-filter hue-rotate(0deg)
+	to
+		-webkit-filter hue-rotate(360deg)
+
+
+bg-animated-gradient()
+	stop1 = rgba(color_pink, 0.16)
+	stop2 = rgba(color_orange, 0.16)
+	background-image linear-gradient(top, stop1, stop2)
+	
+	//background-image url('../img/bg.png')
+	
+	animation hue-shift 1s easing_material infinite
+
+#app-background
+	Layer(z0)
+	background-size cover
+	background-repeat no-repeat
+	background-position top center
+
+
+#app-overlay
+	display none
+	Layer(z8)
+	
+	&.is-visible
+		display block
+		animation fadeIn time_2x easing_material
