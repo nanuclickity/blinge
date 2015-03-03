@@ -21,6 +21,8 @@ css:
     './vendor/animate.css/animate.css'
     './vendor/bootstrap/dist/bootstrap.css'
   ]
+img:
+  path: './public/img'
 font:
   path: './public/fonts'
   deps: [

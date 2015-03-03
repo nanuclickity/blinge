@@ -39,7 +39,7 @@ gulp.task 'copy:vendor', ->
 gulp.task 'copy:img', ->
   gulp
     .src './source/img/*'
-    .pipe gulp.dest(AssetPaths.font.path)
+    .pipe gulp.dest(AssetPaths.img.path)
 
 
 gulp.task 'copy', ['copy:vendor', 'copy:img']
