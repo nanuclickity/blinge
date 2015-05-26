@@ -6,20 +6,31 @@ js:
     './vendor/underscore/underscore.js'
     './vendor/backbone/backbone.js'
     './vendor/marionette/lib/backbone.marionette.js'
-    './vendor/bootstrap/dist/js/bootstrap.min.js'
     './vendor/backbone.radio/build/backbone.radio.js'
     './vendor/richmarker-amd/src/richmarker.js'
     './vendor/requirejs/require.js'
+    './vendor/momentjs/moment.js'
     './vendor/typeahead.js/dist/typeahead.bundle.js'
-    './vendor/moment/moment.js'
-    './vendor/bootstrap/dist/js/bootstrap.js'
+    './vendor/bootstrap/dist/js/bootstrap.js',
+    './vendor/modernizr/modernizr.js'
+    './vendor/easypie/dist/jquery.easypiechart.js'
+    './vendor/isotope/dist/isotope.pkgd.js'
+    './vendor/imagesloaded/imagesloaded.pkgd.js'
+    './vendor/mixitup2/src/jquery.mixitup.js'
+    './vendor/magnific-popup/dist/jquery.magnific-popup.js'
+    './vendor/flexslider/jquery.flexslider-min.js'
+    './vendor/chosen/chosen.jquery.min.js'
   ]
 css:
   path: './public/css/vendor'
   deps: [
-    './vendor/bootstrap/dist/css/bootstrap.min.css'
     './vendor/animate.css/animate.css'
-    './vendor/bootstrap/dist/bootstrap.css'
+    './vendor/bootstrap/dist/css/bootstrap.css'
+    './vendor/lightbox2/css/lightbox.css'
+    './vendor/lightbox2/css/screen.css'
+    './vendor/magnific-popup/dist/magnific-popup.css'
+    '.vendor/flexslider/flexslider.css'
+    './vendor/chosen/chosen.min.css'
   ]
 img:
   path: './public/img'
@@ -27,8 +38,10 @@ font:
   path: './public/fonts'
   deps: [
     './vendor/fontawesome/fonts/fontawesome-webfont.*'
-    './vendor/roboto-fontface/fonts/Roboto-*'
+    './vendor/SourceSansPro/fonts/SourceSansPro-*'
   ]
 others:
   './vendor/require-css/css.js': './public/js'
+  './vendor/require-css/css-builder.js': './public/js'
+  './vendor/require-css/normalize.js': './public/js'
   './vendor/requirejs-plugins/src/async.js': './public/js'
