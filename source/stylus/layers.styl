@@ -32,9 +32,12 @@ body
 	
 #app-header
 	Layer(z4, {bottom: initial})
-	height header_height
+	position fixed
+	min-height header_height
+	height auto
 #app-content
-	Layer(z1, {top: header_height})
+	Layer(z1)
+	padding-top 100px
 
 
 @keyframes hue-shift

@@ -1,0 +1,65 @@
+.view-search
+	border-top 1px theme_border solid
+	width 100%
+	height 100%
+	position relative
+	z-index z1
+	clearfix()
+	
+	.filters-box
+		absolute top left bottom
+		z-index z4
+		width 300px
+	.results-box
+		z-index z2
+		absolute top right left bottom
+		margin-left 300px
+		
+
+.view-search .filters-box
+	position absolute
+	height 100%
+	padding gutter_x
+
+.view-search .list-results
+	list-style none
+	padding 0
+	margin 0
+	Flex-Horizontal()
+	flex-wrap wrap
+	
+	
+	.item-result
+		display block
+		margin 18px
+		
+		width 30%
+		height 460px
+		transform-origin center center
+		animation fadeIn time_2x
+		border 1px rgba(#000, 0.12) solid
+		
+		&:hover
+			border-color rgba(#000, 0.24)
+		// &:nth-child(2n)
+		// 	animation-duration time_3x
+		// &:nth-child(3n)
+		// 	animation-duration time_4x
+		// &:nth-child(4n)
+		// 	animation-duration time_5x
+		
+		// 	
+			
+.view-search .item-result
+	.product-picture
+		height 300px
+		width 100%
+		background-color rgba(#000, 0.1)
+		
+	.product-details
+		list-style none
+		li.name, li.designer, li.prices
+			display block
+		li.designer
+			display block
+		
