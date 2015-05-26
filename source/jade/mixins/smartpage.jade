@@ -1,0 +1,6 @@
+include /mixins/icons.jade
+
+mixin SP_Logo(text, type)
+	- var _type = type || '1x';
+	.sp-logo(class='sp-logo-#{_type}')
+		+Icon_With_Text('fa-simplybuilt', text)

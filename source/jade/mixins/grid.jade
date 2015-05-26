@@ -1,0 +1,18 @@
+mixin Column(size)
+	//- Usage:
+	//- Require this file on top using
+	//-   include ../mixins/grid.jade
+	//- Then use it in your files like this
+	//- 	+Column()												// Fills up the container
+	//-   +Column(4)											// Column of width 4/12 will be created
+	//-   +Column(4)(data-color='red', data-text='Murder') 		// Add additonal attributes
+	//-   +Column(4)											// An indented block can be inside column this way
+	//- 		button.btn.btn-tosave Save
+
+
+	- var _size = size ? size.toString() : '12';
+	- var classes = ['col-md-', 'col-lg-', 'col-sm-'].map(function(c){ return c + _size });
+
+	div(class="#{classes.join(' ')}")&attributes(attributes)= name
+		if block
+			block

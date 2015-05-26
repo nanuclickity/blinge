@@ -1,19 +1,37 @@
-mixin Icon(klass)
-	i.fa.fa-fw(class='#{klass}')
+include /mixins/icons.jade
 
-.back-button
-	button.btn.btn-toback
-		i.fa.fa-angle-left
+mixin RightNav
+	ul.list-right-nav
+		li.list-item
+			a(href='#/login') Sign In
+		li.list-item
+			a(href='#/help') Help
+		li.list-item
+			a(href='#/queue') Queue
+		li.list-item
+			a(href='#/cart') Cart
 
-.title 
-	| Home &nbsp;
-	b.caret
 
-.window-controls
-	ul.list-unstyled
-		li.window-control(data-action='minimize')
-			+Icon('fa-angle-down')
-		li.window-control(data-action='toggle')
-			+Icon('fa-expand')
-		li.window-control(data-action='close')
-			+Icon('fa-remove')
+
+mixin Categories
+	ul.list-inline.list-categories
+		each cat in navcats
+			li.cat-item
+				a(href='/#/search/#{to_url(cat)}') #{cat}
+
+//- Pass in a 'p_query' to template to prefill value of search input
+mixin Search
+	.search-bar
+		.search-input
+			input(type='search', placeholder='Search', value = p_query ? p_query : '')
+		.search-icon
+			+Icon('fa-search')
+
+
+.top-shelf
+	a.title(href='/') Blinge
+	+RightNav
+
+.bottom-shelf
+	+Categories
+	+Search
