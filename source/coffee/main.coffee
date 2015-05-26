@@ -1,4 +1,3 @@
-
 js_root = `!!chrome.app.runtime ? '/public/js' : '/js'`
 
 requirejs.config
@@ -34,7 +33,7 @@ requirejs.config
 			deps: ['jquery']
 
 
-requirejs ['jquery', 'app'], ($, App)->
+requirejs ['jquery', 'app'], ($, Application)->
 
 	do (()->
 		sc = document.createElement 'script'
@@ -45,5 +44,5 @@ requirejs ['jquery', 'app'], ($, App)->
 		document.head.appendChild(sc)
 	)
 
-
+	App = new Application()
 	do App.start

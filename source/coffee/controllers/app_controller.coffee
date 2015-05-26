@@ -32,5 +32,9 @@ define [
 			@RM.load
 				Header : 'views/header'
 				Content: 'views/splash'
+		search: ->
+			@RM.load
+				Header : 'views/header'
+				Content: 'views/search'
 
 	return AppController

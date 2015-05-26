@@ -71,5 +71,5 @@ define [
 					if i<=0 then Radio.trigger 'global', 'loader:stop'
 
 
-	App = new Modularity()
-	return App
+	
+	return Modularity

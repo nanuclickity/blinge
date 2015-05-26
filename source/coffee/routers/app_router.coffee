@@ -11,6 +11,8 @@ define [
 			'login(/)' : 'login'
 			'logout(/)': 'logout'
 
+			'search(/)': 'search'
+			'search/:q': 'search'
 			
 		initialize: (options)->
 			console.log 'AppRouter::OK'
