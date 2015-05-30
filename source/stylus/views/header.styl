@@ -26,7 +26,7 @@ HeaderButton()
 		// stop1 = rgba(#fff, 0.45)
 		// stop2 = rgba(#fff, 0)
 		// background-image linear-gradient(top, stop1, stop2)
-		background-color rgba(#fff, 0.88)
+		background-color rgba(#fff, 0.8)
 		color theme_font
 		
 	.top-shelf, .bottom-shelf
@@ -38,25 +38,30 @@ HeaderButton()
 	.list-categories, .search-bar
 		display inline-block
 		margin-right 24px
+		
+
 #app-header .list-categories
 	padding-left 4px
 	list-style none
 	margin 0
 	li.cat-item
-		
 		border-width 0 0 2px 0
-		
 		font-family font_semibold
-		color theme_font
+		color lighten(theme_font, 20%)
 		padding 10px 12px
-		opacity 0.5
+		opacity 0.8
+		animation fadeInLeft time_2x
 		&:hover
+			color color_base
 			opacity 0.8
-		&:active
+		&:active, &:focus
 			opacity 1
+		
 		a
 			color inherit
 			font inherit
+			&:focus
+				color color_base
 
 #app-header .search-bar
 	display block
@@ -88,7 +93,9 @@ HeaderButton()
 			color inherit
 		&:hover
 			color color_base
+			border-color color_base
 		&:active
+			border-color color_base
 			color darken(color_base, 10%)
 
 

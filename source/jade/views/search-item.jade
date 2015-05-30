@@ -1,8 +1,10 @@
 .product-picture
-	img(title='#{name}', src='#{picture}')
+	img.img-responsive(title='#{name}', src='#{picture}')
 ul.product-details
 	li.name #{name}
 	li.designer #{designer}
 	li.prices
-		span.price-rental Rs. #{price_rental}
-		span.price-retails Rs. #{price_retail}
+		.price-rental
+			| Rental: Rs. #{price_rental}
+		.price-retail 
+			| Retail: Rs. #{price_retail}

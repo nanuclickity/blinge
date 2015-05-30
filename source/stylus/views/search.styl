@@ -1,5 +1,5 @@
 .view-search
-	border-top 1px theme_border solid
+	// border-top 1px theme_border solid
 	width 100%
 	height 100%
 	position relative
@@ -34,7 +34,6 @@
 		margin 18px
 		
 		width 30%
-		height 460px
 		transform-origin center center
 		animation fadeIn time_2x
 		border 1px rgba(#000, 0.12) solid
@@ -57,9 +56,33 @@
 		background-color rgba(#000, 0.1)
 		
 	.product-details
+		height 100px
+		padding 10px 
+		margin-top 8px
 		list-style none
 		li.name, li.designer, li.prices
 			display block
+			padding 0px 8px
 		li.designer
 			display block
 		
+		li.name
+			font-family font_light
+			font-size 18px
+			color lighten(theme_font, 20%)
+		
+		li.designer
+			font-family font_regular
+			font-size 12px
+			color lighten(theme_font, 10%)
+		li.prices
+			margin-top 6px
+			clearfix()
+			color lighten(theme_font, 20%)
+		
+		.price-rental, .price-retail
+			display block
+		.price-rental
+			float left
+		.price-retail
+			float right

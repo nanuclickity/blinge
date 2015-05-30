@@ -18,6 +18,7 @@ define [
 		
 		initialize: ->
 			@RM = new RegionManager({el: 'body'})
+			@RM.load Header: 'views/header'
 			console.log 'AppController::OK'
 		
 		onBeforeDestroy: -> do @RM.destroy
@@ -28,13 +29,7 @@ define [
 		login:  -> @RM.load Content: 'views/login'
 		logout: -> @RM.load Content: 'views/logout' 
 
-		home: ->
-			@RM.load
-				Header : 'views/header'
-				Content: 'views/splash'
-		search: ->
-			@RM.load
-				Header : 'views/header'
-				Content: 'views/search'
+		home: ->   @RM.load Content: 'views/splash'
+		search: -> @RM.load Content: 'views/search'
 
 	return AppController
