@@ -4,7 +4,7 @@ define [
 ], (Backbone, Data)->
 
 	res = Data.map (d, i)->
-		d['picture'] = 'http://placehold.it/200x280&text=' + i
+		d['picture'] = "http://placehold.it/200x280&text=#{i}"
 		return d
 	
 	class MostPopular extends Backbone.Collection
