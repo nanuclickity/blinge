@@ -9,5 +9,5 @@ define [
 
 
 
-	C = new Products(data.splice(0, 25))
+	C = new Products(_.take(data, 25))
 	return C
