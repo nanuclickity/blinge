@@ -3,7 +3,7 @@ define [
 	'templates/views/home'
 	'collections/most_popular'
 ], (Marionette, tpl, MostPopular)->
-
+	
 	class HomeView extends Marionette.ItemView
 		className: 'view-home'
 		template: tpl
@@ -17,10 +17,10 @@ define [
 				twoImages:
 					left:
 						title: 'Awesome Image 1'
-						url: 'http://placehold.it/450x450'
+						url: 'http://placehold.it/450x280'
 					right:
 						title: 'Awesome Image 2'
-						url: 'http://placehold.it/450x450'
+						url: 'http://placehold.it/450x280'
 				mostPopular: -> _.map(MostPopular.take(10), (m)-> do m.toJSON )
 			}
 
