@@ -1,0 +1,28 @@
+.modal
+	.modal-dialog
+		margin-top 20vh
+		animation fadeOutDown time_2x easing_material
+	
+	&.in
+		.modal-dialog
+			transform-origin center top 
+			animation fadeInDown time_2x easing_material
+			
+
+.modal
+	border_color = rgba(#000, 0.12)
+	.modal-content
+		border-radius 2px 2px 0 0
+		background-color rgba(#fff, 0.92)
+		border-color color_base
+		
+	.modal-header
+		border-bottom-color border_color
+	.modal-footer
+		border-top-color border_color
+		
+
+@media (max-width:768px)
+	.modal-dialog
+		margin-left 40px
+		margin-right 40px

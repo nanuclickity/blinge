@@ -1,0 +1,26 @@
+InfoCard(ops)
+	ops = ops ? ops : {}
+	bg_color = ops['bg'] ? ops['bg'] : transparent
+	border_color = ops['border'] ? ops['border'] : transparent
+	border-radius 0
+	border 1px border_color solid
+	background-color bg_color
+	
+	.card-header, .card-body
+		padding 8px ( ops['border'] ? gutter_x : 0 )
+
+	.card-header
+		Flex-Horizontal()
+		.title, .card-controls
+			display block
+			align-items stretch
+		.title
+			flex 1
+		.card-controls
+			width auto
+			align-self flex-end
+			
+
+			
+.ui-infocard
+	InfoCard({})

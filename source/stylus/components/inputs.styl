@@ -1,0 +1,58 @@
+.input-field
+	color theme_font
+
+	input
+		border-radius 0
+		border-width 0 0 1px 0
+		border-color theme_border
+
+		font-family inherit
+		font-size inherit
+		color inherit
+		
+		opacity opacity_default
+
+		&:disabled
+			opacity opacity_disabled
+			user-select none
+		
+		&:hover, &:active
+			opacity opacity_active
+			
+
+// Floating label
+.input-field .floating-label
+	inp_bg = #fff
+	margin-top 32px
+	position relative
+	
+	.f-label
+		absolute top -18px left -2px
+		font-size 12px
+		font-family font_semibold
+		// color lighten(theme_font, 20%)
+		color theme_font
+		// background-color inp_bg
+		padding 4px 0
+		
+		transform-origin center left
+		opacity 0
+		pointer-events none
+	
+	input
+		background-color inp_bg
+		padding 8px 0 2px 0
+		font-size 1.6em
+		color color_base
+		height auto
+		animation fadeInDown time_1x
+		// Uncomment if you want to show html placeholders
+		// &[placeholder] + .f-label
+		// 	opacity 0
+
+	input:hover + .f-label
+		color theme_font
+	
+	input:focus + .f-label
+		opacity 1
+		animation fadeInUp time_1x

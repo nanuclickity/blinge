@@ -47,14 +47,17 @@ ui-box()
 	transition all time_1x ease
 	padding 0
 	transition all time_2x easing_material
+	
 	&:hover
 		border-color 1px rgba(#000, 0.24) solid
-		box-shadow 0px 2px 4px 0 rgba(#000, 0.12)
+		box-shadow 0px 4px 8px 0 rgba(#000, 0.24)
 
 	.box-header
 		ui-box-header()
-	.box-body
+		border-bottom 1px theme_border solid
+	.box-body, .box-footer, .box-header
 		padding gutter_x
+	
 
 .box
 	ui-box()

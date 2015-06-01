@@ -1,0 +1,71 @@
+.ui-slider
+	flex 1
+	display flex
+	position relative
+
+.ui-slider .slider-inner
+	flex 1
+	display flex
+	position relative
+	
+.ui-slider .slide
+	display flex
+	absolute top left right bottom
+	z-index z2
+	transition all time_2x ease-in-out-sine
+	transform-origin center left
+	&.is-active
+		z-index z3
+		animation fadeInUp time_2x easing_material
+		
+	.slide-pic
+		user-select none
+	
+		background-size cover
+		background-position left center
+		background-repeat no-repeat
+	
+		flex 1
+	
+
+.ui-slider		
+	.go-prev, .go-next
+		absolute bottom 16px
+		z-index z5
+		font-size 24px
+		color #fff
+		user-select none
+		border 1px #fff solid
+		
+		width 48px
+		height 48px
+		background-color rgba(#000, 0.32)
+		border-radius 50%
+		text-align center
+		
+		cursor pointer
+		transition all time_1x easing_material
+
+		i	
+			padding 12px 0
+			
+		&:hover
+			background-color rgba(#fff, 0.9)
+			color rgba(#000, 0.8)
+		
+	.go-prev
+		left 16px
+		&:active
+			left 8px
+	.go-next
+		right 16px
+		&:active
+			right 8px
+			
+
+
+@media (max-width: 768px)
+	.ui-slider
+		.go-prev, .go-next
+			bottom initial
+			top 24px

@@ -112,18 +112,8 @@ theme_veil = rgba(#000, 0.06)
 is_theme_light = (luminosity(theme_base)) > (0.36)
 is_color_light = (luminosity(color_base)) > (0.36)
 
-if is_theme_light
-	theme_font = #888
-else
-	theme_font = #e2e2e2
-	
-
-if is_color_light
-	color_font = theme_font
-else
-	color_font = #e8e8e8
-
-
+theme_font = is_theme_light ? #888 : #6e6e6e
+color_font = is_color_light ? theme_font : #f2f2f2
 
 /* Others Settings
  */
