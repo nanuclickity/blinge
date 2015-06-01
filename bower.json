@@ -27,6 +27,7 @@
     "fontawesome": "*",
     "requirejs-i18n": "*",
     "require-css": "*",
-    "requirejs-plugins": "*"
+    "requirejs-plugins": "*",
+    "pickadate": "~3.5.6"
   }
 }
