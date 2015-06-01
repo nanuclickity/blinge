@@ -1,0 +1,42 @@
+.view-home
+	width 1080px
+	margin 20px auto
+	display block 
+
+
+.view-home .showcase
+	position relative
+	Flex-Horizontal()
+	height 450px
+	.showcase-control
+		absolute top left bottom
+		z-index z4
+		width 300px
+		background-color rgba(#000, 0.48)
+		
+	.showcase-images
+		flex 1
+		position relative
+		
+		img
+			absolute top left right bottom
+			z-index z1
+			display none
+		img.active
+			z-index z2
+			display block
+			animation fadeIn time_2x
+			
+.view-home .reserve-a-dress
+	margin 24px
+	color #ddd
+	h3, button
+		text-align center
+	input, button
+		width 100%
+	input
+		border 1px rgba(#000, 0.2) solid
+		border-radius 2px
+		background-color rgba(#fff, 0.4)
+		
+	

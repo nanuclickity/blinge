@@ -29,7 +29,7 @@ define [
 		login:  -> @RM.load Content: 'views/login'
 		logout: -> @RM.load Content: 'views/logout' 
 
-		home: ->   @RM.load Content: 'views/splash'
+		home: ->   @RM.load Content: 'views/home'
 		search: -> @RM.load Content: 'views/search'
 
 	return AppController

@@ -1,0 +1,56 @@
+include /mixins/icons.jade
+
+mixin Showcase
+	.showcase-control
+		.reserve-a-dress
+			h3 Reserve A Dress
+			.date-picker
+				input(type='date')
+			.other-options
+				.size-picker
+				.zip-code
+			button.btn.btn-search
+				+Icon_With_Text('fa-search', 'Search')
+	.showcase-images
+		each url, ind in showcaseImages
+			img.img-responsive(src='#{url}', class =(ind === 0) ? 'active': '' )
+
+
+
+mixin TwoImages
+	.big-images
+		.image-left
+			.title #{twoImages.left.title}
+			img(src='#{twoImages.left.url}')
+		.image-right
+			.title #{twoImages.right.title}
+			img(src='#{twoImages.right.url}')
+
+
+mixin MostPopular
+	h4 Most Popular
+	ul.list-unstyled.list-inline.list-hr-scroll
+		each item in mostPopular
+			li.item
+				.image
+					img.img-responsive(src='#{item.picture}')
+				.details
+					.designer #{item.designer}
+					.name #{item.name}
+					.prices
+						.price-rental
+							b RENTAL: 
+							| Rs.#{item.price_rental}
+						.price-retail 
+							b RETAIL: 
+							| Rs. #{item.price_retail}
+
+
+
+
+.showcase
+	+Showcase
+.two-images
+	+TwoImages
+.most-popular
+	+MostPopular
